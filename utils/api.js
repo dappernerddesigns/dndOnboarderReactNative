@@ -15,3 +15,9 @@ export const ruleText = (ruleName) => {
 		return data;
 	});
 };
+
+export const spells = () => {
+	return api.get('/spells').then(({ data }) => {
+		return data.results;
+	});
+};

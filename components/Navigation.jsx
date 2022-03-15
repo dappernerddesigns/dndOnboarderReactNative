@@ -23,6 +23,12 @@ export const Navigation = () => {
 				}}>
 				<Text style={styles.navText}>The Rules</Text>
 			</Pressable>
+			<Pressable
+				onPress={() => {
+					RouteNavigation.navigate('Spells');
+				}}>
+				<Text style={styles.navText}>Spells</Text>
+			</Pressable>
 		</View>
 	);
 };
@@ -34,6 +40,7 @@ const styles = StyleSheet.create({
 		flexDirection: 'column',
 		alignItems: 'center',
 		justifyContent: 'center',
+		paddingTop: 25,
 	},
 
 	navText: {

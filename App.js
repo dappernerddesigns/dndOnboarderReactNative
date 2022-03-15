@@ -12,6 +12,8 @@ import { Navigation } from './components/Navigation';
 import { DiceRoller } from './components/DiceRoller';
 import { RuleBlock } from './components/RuleBlock';
 import { RuleInfo } from './components/RuleInfo';
+import { Spells } from './components/Spells';
+
 export default function App() {
 	return (
 		<NavigationContainer ref={navigationRef}>
@@ -35,6 +37,11 @@ export default function App() {
 				<Stack.Screen
 					name='RuleInfo'
 					component={RuleInfo}
+					options={{ headerShown: false }}
+				/>
+				<Stack.Screen
+					name='Spells'
+					component={Spells}
 					options={{ headerShown: false }}
 				/>
 			</Stack.Navigator>

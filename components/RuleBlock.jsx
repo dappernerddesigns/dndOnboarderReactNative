@@ -1,4 +1,11 @@
-import { View, Text, StyleSheet, Pressable, Image } from 'react-native';
+import {
+	View,
+	Text,
+	StyleSheet,
+	Pressable,
+	Image,
+	ScrollView,
+} from 'react-native';
 import { useState, useEffect } from 'react';
 import { rules } from '../utils/api';
 import { SingleRule } from './SingleRule';
@@ -14,20 +21,24 @@ export const RuleBlock = ({ navigation }) => {
 	}, []);
 
 	return (
-		<View style={styles.container}>
-			<Text style={styles.header}>Click below to read rule blocks</Text>
-			<View>
-				{showRules.map((rule) => {
-					return (
-						<SingleRule
-							rule={rule}
-							navigation={navigation}
-							key={rule.index}
-						/>
-					);
-				})}
+		<ScrollView>
+			<View style={styles.container}>
+				<Text style={styles.header}>
+					Click below to read rule blocks
+				</Text>
+				<View>
+					{showRules.map((rule) => {
+						return (
+							<SingleRule
+								rule={rule}
+								navigation={navigation}
+								key={rule.index}
+							/>
+						);
+					})}
+				</View>
 			</View>
-		</View>
+		</ScrollView>
 	);
 };
 
