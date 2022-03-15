@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "dnd4nc",
+    "slug": "dnd4nc",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
